@@ -54,13 +54,7 @@ class WatermarkAdmin(admin.ModelAdmin):
     list_display = ('name', 'opacity', 'style')
 
 
-class GalleryUploadAdmin(admin.ModelAdmin):
-    def has_change_permission(self, request, obj=None):
-        return False # To remove the 'Save and continue editing' button
-
-
 admin.site.register(Gallery, GalleryAdmin)
-admin.site.register(GalleryUpload, GalleryUploadAdmin)
 admin.site.register(Photo, PhotoAdmin)
 admin.site.register(PhotoEffect, PhotoEffectAdmin)
 admin.site.register(PhotoSize, PhotoSizeAdmin)
